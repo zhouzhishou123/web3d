@@ -30,7 +30,7 @@ function init() {
     document.body.appendChild(renderer.domElement);
 
     const controls = new OrbitControls( camera, renderer.domElement );
-    controls.autoRotate = true;
+    // controls.autoRotate = true;
     // const loader = new GLTFLoader();
     // const gui = new GUI();
 
@@ -77,8 +77,8 @@ function init() {
     function animate() {
         requestAnimationFrame(animate);
         controls.update(); // 更新控制器，使自动旋转生效
-        parentMesh.rotation.x += 0.05;
-        
+        parentMesh.rotation.x += 0.1;
+        mesh.rotation.x += 0.1;
         // parentMesh.rotation.y += 0.01;
         renderer.render(scene, camera);
     }
