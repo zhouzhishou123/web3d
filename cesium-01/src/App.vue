@@ -18,9 +18,13 @@ onMounted(() => {
     infoBox: false,
     sceneModePicker: false,
     selectionIndicator: false,
-    timeline: false,
-    animation: false,
+    timeline: false,  // 隐藏底部时间轴
+    animation: false, // 隐藏底部动画控件
   });
+  
+  // 隐藏工具栏和底部栏
+   // viewer.toolbar.style.display = 'none';
+  // viewer.bottomContainer.style.display = 'none';
   
   // viewer.scene.globe.enableLighting = true;
 });
@@ -37,5 +41,5 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-
+/* 隐藏 Cesium 工具栏和底部栏 */
 </style>
